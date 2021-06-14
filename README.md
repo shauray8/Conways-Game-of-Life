@@ -3,3 +3,5 @@ The Game of Life is a cellular-automaton, zero player game, developed by John Co
 
 
 ## Slides for the game is in the assets folder !!
+
+maybe i will make a webapp to interact with the game.
