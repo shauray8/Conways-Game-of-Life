@@ -8,7 +8,7 @@ maybe i will make a webapp to interact with the game.
 
 
 ## Resources 
-[Book (not sure about the quality of the content writern) ](https://www.amazon.in/Game-Cellular-Automata-Andrew-Adamatzky/dp/1849962162)<br>
+[Book (not sure about the quality of the content written) ](https://www.amazon.in/Game-Cellular-Automata-Andrew-Adamatzky/dp/1849962162)<br>
 [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)<br>
 [Try stuff in your browser](https://playgameoflife.com/)<br>
 [Youtube Video](https://www.youtube.com/watch?v=C2vgICfQawE)<br>
