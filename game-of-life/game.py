@@ -16,9 +16,9 @@ def main():
     CLOCK = pygame.time.Clock()
     SCREEN.fill(BLACK)
 
+    drawGrid()
+    random_initial()
     while True:
-        drawGrid()
-        random_initial()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -32,19 +32,13 @@ def drawGrid():
     for x in range(0, WINDOW_WIDTH, blockSize):
         for y in range(0, WINDOW_HEIGHT, blockSize):
             rect = pygame.Rect(x, y, blockSize, blockSize)
-            pygame.draw.rect(SCREEN, WHITE, rect, 1)
+            pygame.draw.rect(SCREEN, COLOR, rect, 1)
             
 
 def random_initial():
-    blockSize = 13 #Set the size of the grid block
-    number = random.randint(1,20)
-    for i in range(number):
-        x = random.randint(0, WINDOW_HEIGHT)
-        y = random.randint(0, WINDOW_HEIGHT)
-        rect = pygame.draw.rect(x, y, blockSize, blockSize)
-        print(x, y)
-        pygame.draw.rect(SCREEN, RED, rect, 1)
-
+    if random.randint(1,100) % 5 == 0:
+        return RED
+    return WHITE
 
 def manual_initial():
     pass
