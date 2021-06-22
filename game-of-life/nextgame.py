@@ -8,11 +8,17 @@ AFTERCLICK = (200, 200, 200)
 
 boardWidth = 500
 boardHeight = 500
-rectX = 150
-rectY = 150
+rectX = 10
+rectY = 10
 rectWidth = 200
 rectHeight = 200
 myRectangle = pygame.Rect(rectX, rectY, rectWidth, rectHeight)
+
+BLACK = (0, 0, 0)
+WHITE = (200, 200, 200)
+WINDOW_HEIGHT = 600
+WINDOW_WIDTH = 600
+RED = (255,0,0)
 
 def main():
     global FPSCLOCK, DISPLAYSURF
@@ -20,6 +26,7 @@ def main():
     FPSCLOCK = pygame.time.Clock()
     DISPLAYSURF = pygame.display.set_mode((boardWidth, boardHeight))
     pygame.display.set_caption("Klikni, kar klikni.")
+    DISPLAYSURF.fill(BGCOLOR)
 
     mousex = 0
     mousey = 0
@@ -27,6 +34,7 @@ def main():
     mouseOver = False
 
     while True:
+        drawGrid()
         for event in pygame.event.get():
             if event.type == QUIT or (event.type == KEYUP and event.key == K_ESCAPE):
                 pygame.quit()
@@ -40,38 +48,13 @@ def main():
 
         mouseOver = determine_mouseOver(mousex, mousey)
 
-        DISPLAYSURF.fill(BGCOLOR)
         # Just draw the rect with the current button color.
-        pygame.draw.rect(DISPLAYSURF, button_color, myRectangle)
 
         if mouseOver:
             pygame.draw.rect(DISPLAYSURF, AFTERCLICK, myRectangle, 3)
 
         pygame.display.update()
         FPSCLOCK.tick(30)
-    #while True:
-    #    mouseClicked = False
-    #    DISPLAYSURF.fill(BGCOLOR)
-    #    pygame.draw.rect(DISPLAYSURF, BEFORECLICK, myRectangle)
-
-    #    for event in pygame.event.get():
-    #        if event.type == QUIT or (event.type == KEYUP and event.key == K_ESCAPE):
-    #            pygame.quit()
-    #            sys.exit()
-    #        elif event.type == MOUSEMOTION:
-    #            mousex, mousey = event.pos
-    #        elif event.type == MOUSEBUTTONUP:
-    #            mousex, mousey = event.pos
-    #            mouseClicked = True
-
-    #    mouseOver = determine_mouseOver(mousex, mousey)
-    #    if mouseOver == True and mouseClicked == True:
-    #        pygame.draw.rect(DISPLAYSURF, AFTERCLICK, myRectangle)
-    #    elif mouseOver == True and mouseClicked == False:
-    #        pygame.draw.rect(DISPLAYSURF, AFTERCLICK, myRectangle, 3)
-
-    #    pygame.display.update()
-    #    FPSCLOCK.tick(30)
 
 def determine_mouseOver(valx, valy):
     if myRectangle.collidepoint(valx, valy):
@@ -85,7 +68,7 @@ def drawGrid():
     for x in range(0, WINDOW_WIDTH, blockSize):
         for y in range(0, WINDOW_HEIGHT, blockSize):
             rect = pygame.Rect(x, y, blockSize, blockSize)
-            pygame.draw.rect(SCREEN, COLOR, rect, 1)
+            pygame.draw.rect(DISPLAYSURF, WHITE, rect, 1)
             
 if __name__ == "__main__":
     main()
