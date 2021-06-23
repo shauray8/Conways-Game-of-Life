@@ -1,39 +1,32 @@
 import pygame
 
-
 BLACK    = (   0,   0,   0)
 WHITE    = ( 255, 255, 255)
 GREEN    = (   0, 255,   0)
 RED      = ( 255,   0,   0)
 
+width  = 13
+height = 13
+blockSize=13
 
-width  = 20
-height = 20
+margin = 3
 
-
-margin = 5
-
+size = [500, 500]
 grid = []
-for row in range(10):
+for row in range(size[0]//2):
 
     grid.append([])
-    for column in range(10):
+    for column in range(size[1]//2):
         grid[row].append(0) 
 
 pygame.init()
 
-
-size = [255, 255]
 screen = pygame.display.set_mode(size)
-
-
-
 done = False
 
 
 clock = pygame.time.Clock()
 
-#Main Program Loop
 while done == False:
     for event in pygame.event.get(): 
         if event.type == pygame.QUIT: 
@@ -52,23 +45,18 @@ while done == False:
     # Set the screen background
     screen.fill(BLACK)
 
-
-    for row in range(10):
-       for column in range(10):
+    for row in range(0, size[0]//2):
+       for column in range(0, size[1]//2):
             color = WHITE
             if grid[row][column] == 1:
                 color = RED
-            pygame.draw.rect(screen,
-                             color,
-                             [(margin+width)*column+margin,
-                              (margin+height)*row+margin,
-                              width,
-                              height])
-
+            pygame.draw.rect(screen, color, [
+                (margin+width)*column+margin,
+                              (margin+width)*row+margin,
+                              height,
+                              width])
 
     clock.tick(90)
-
-
 
     pygame.display.flip()
 
