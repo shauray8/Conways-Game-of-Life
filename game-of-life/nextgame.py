@@ -51,13 +51,13 @@ def main():
         # Just draw the rect with the current button color.
 
         if mouseOver:
-            pygame.draw.rect(DISPLAYSURF, AFTERCLICK, myRectangle, 3)
+            pygame.draw.rect(DISPLAYSURF, AFTERCLICK, rect, 3)
 
         pygame.display.update()
         FPSCLOCK.tick(30)
 
 def determine_mouseOver(valx, valy):
-    if myRectangle.collidepoint(valx, valy):
+    if rect.collidepoint(valx, valy):
         return True
     else:
         return False
