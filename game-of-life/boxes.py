@@ -83,11 +83,18 @@ while done == False:
                 color = WHITE
                 if grid[row][column] == 1:
                     color = RED
-                pygame.draw.rect(screen, color, [
-                    (margin+width)*column+margin,
-                                  (margin+width)*row+margin,
-                                  height,
-                                  width], 1)
+                    pygame.draw.rect(screen, color, [
+                        (margin+width)*column+margin,
+                                      (margin+width)*row+margin,
+                                      height,
+                                      width])
+                else:
+                    color = WHITE
+                    pygame.draw.rect(screen, color, [
+                        (margin+width)*column+margin,
+                                      (margin+width)*row+margin,
+                                      height,
+                                      width], 1)
 
     if start:
         advanceBoard()
