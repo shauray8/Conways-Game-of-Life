@@ -63,3 +63,10 @@ It can even help us understand the diversity of life that has evolved on earth.
 [Maybe one more youtube video](https://www.youtube.com/watch?v=FWSR_7kZuYg)<br>
 
 I think thats it to understand what this is all about !
+
+
+## Prof. John Horton Conway (1937-2020)
+<p align="center">
+![](./assets/download.jpg)
+</p>
+[Genius at play: The curious mind of John Horton Conway](https://www.essra.org.cn/upload/202006/132364148588881489.pdf)
