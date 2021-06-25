@@ -66,7 +66,6 @@ I think thats it to understand what this is all about !
 
 
 ## Prof. John Horton Conway (1937-2020)
-<p align="center">
-![](./assets/download.jpg)
-</p>
+<p align="center"> <img src="/assets/download.jpg"></img></p>
+
 [Genius at play: The curious mind of John Horton Conway](https://www.essra.org.cn/upload/202006/132364148588881489.pdf)
