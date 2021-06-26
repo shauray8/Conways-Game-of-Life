@@ -7,6 +7,7 @@ The Game of Life is a cellular-automaton, zero player game, developed by John Co
 maybe i will make a webapp to interact with the game. For now it's just pygame (I think it's better than a webapp).
 
 ## what exactly is Convay's game of life ?
+It's just a game boi !
 
 ### Rules for the game !
 
