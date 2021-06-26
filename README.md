@@ -64,6 +64,8 @@ It can even help us understand the diversity of life that has evolved on earth.
 
 I think thats it to understand what this is all about !
 
+## How to use it ?
+Updating soon !
 
 ## Prof. John Horton Conway (1937-2020)
 <p align="center"> <img src="/assets/download.jpg"></img></p>
