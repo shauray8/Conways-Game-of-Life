@@ -111,9 +111,6 @@ while done == False:
                                   height,
                                   width], 1)
 
-
-
-
     clock.tick(90)
 
     pygame.display.flip()
