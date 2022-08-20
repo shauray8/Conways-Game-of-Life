@@ -1,6 +1,9 @@
+## Imports
+
 import pygame
 import sys
 
+## Parameters 
 BLACK    = (   0,   0,   0)
 WHITE    = ( 255, 255, 255)
 GREEN    = (   0, 255,   0)
@@ -16,18 +19,12 @@ starty = 2
 size = [500, 500]
 grid = []
 active = []
-for row in range(size[0]//2):
-
-    grid.append([])
-    for column in range(size[1]//2):
-        grid[row].append(0) 
 
 def getNeighbors(cell):
     for x in range(int(grid[cell[0]])-1, int(grid[cell[0]])+2):
         for y in range(grid[cell[1]] - 1, grid[cell[1]] + 2):
             if (x, y) != (grid[cell[0]], grid[cell[1]]):
                 yield grid[x][y]
-
 
 def getNeighborCount():
     neighbor_counts = []
@@ -42,12 +39,18 @@ def advanceBoard():
             active.add(cell)
             print(cell)
 
+for row in range(size[0]//2):
+
+    grid.append([])
+    for column in range(size[1]//2):
+        grid[row].append(0) 
 
 pygame.init()
 
 screen = pygame.display.set_mode(size)
 done = False
 
+font = pygame.font.SysFont('Arial', 25)
 rect = pygame.Rect(2, 2, 200, 30)
 
 clock = pygame.time.Clock()
@@ -77,6 +80,8 @@ while done == False:
 
     screen.fill(BLACK)
     pygame.draw.rect(screen, GREEN, rect)
+
+    screen.blit(font.render('Start!', True, (255,255,255)), (70, 2))
 
     if not start:
         for row in range(starty, size[0]//2):
@@ -114,6 +119,7 @@ while done == False:
     clock.tick(90)
 
     pygame.display.flip()
+
 
 pygame.quit()
 
