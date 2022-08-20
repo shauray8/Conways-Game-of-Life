@@ -4,9 +4,10 @@ The Game of Life is a cellular-automaton, zero player game, developed by John Co
 
 ## Slides for the game is in the assets folder !!
 
-maybe i will make a webapp to interact with the game.
+maybe i will make a webapp to interact with the game. For now it's just pygame (I think it's better than a webapp).
 
 ## what exactly is Convay's game of life ?
+It's just a game boi !
 
 ### Rules for the game !
 
@@ -64,6 +65,8 @@ It can even help us understand the diversity of life that has evolved on earth.
 
 I think thats it to understand what this is all about !
 
+## How to use it ?
+Updating soon !
 
 ## Prof. John Horton Conway (1937-2020)
 <p align="center"> <img src="/assets/download.jpg"></img></p>
